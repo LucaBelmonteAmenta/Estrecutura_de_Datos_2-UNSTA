@@ -1,0 +1,30 @@
+Timer unit: 1e-07 s
+
+Total time: 0.0184576 s
+File: c:\Users\lucas\Desktop\Estructura de datos II\TP final\Metodos\Insercion.py
+Function: Metodo2 at line 24
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    24                                           def Metodo2(lista, largo_lista):
+    25                                               # Metodo de Inserción Binaría
+    26                                           
+    27        11     182830.0  16620.9     99.1      for I in range(1, largo_lista):
+    28                                                   
+    29        10        141.0     14.1      0.1          auxiliar = lista[I]
+    30        10         63.0      6.3      0.0          primero = 0
+    31        10         68.0      6.8      0.0          ultimo = I - 1
+    32                                           
+    33        36        229.0      6.4      0.1          while (primero <= ultimo):
+    34        26        306.0     11.8      0.2              centro = int((primero + ultimo) / 2)
+    35        26        195.0      7.5      0.1              if (auxiliar < lista[centro]):
+    36        11         78.0      7.1      0.0                  ultimo = centro - 1
+    37                                                       else:
+    38        15         97.0      6.5      0.1                  primero = centro + 1
+    39                                           
+    40        33        279.0      8.5      0.2          for k in range(I-1, (primero-1), -1):
+    41        23        205.0      8.9      0.1              lista[k+1] = lista[k]
+    42                                           
+    43        10         76.0      7.6      0.0          lista[primero] = auxiliar
+    44                                               
+    45         1          9.0      9.0      0.0      return lista

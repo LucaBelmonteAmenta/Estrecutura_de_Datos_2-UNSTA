@@ -1,0 +1,17 @@
+Timer unit: 1e-07 s
+
+Total time: 0.0107541 s
+File: c:\Users\lucas\Desktop\Estructura de datos II\TP final\Metodos\Burbuja.py
+Function: Metodo2 at line 18
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    18                                           def Metodo2(lista, largo_lista):
+    19                                               
+    20        11     104413.0   9492.1     97.1      for I in range(largo_lista - 1):
+    21        65        867.0     13.3      0.8          for J in range(largo_lista - (I + 1)):
+    22        55       1110.0     20.2      1.0              if(lista[J] > lista[J + 1]):
+    23        23        276.0     12.0      0.3                  auxiliar = lista[J]
+    24        23        361.0     15.7      0.3                  lista[J] = lista[J + 1]
+    25        23        501.0     21.8      0.5                  lista[J + 1] = auxiliar
+    26         1         13.0     13.0      0.0      return lista
