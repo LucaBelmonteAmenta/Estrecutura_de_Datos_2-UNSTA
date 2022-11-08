@@ -1,6 +1,7 @@
 from Metodos import Burbuja, Insercion, Seleccion, Shell, MergeSort, QuickSort
 from ProfilerReportGenerator import ProfilerReportGenerator
 from TestRun import TestRun 
+from ProfilerReportAnalyzer import ProfilerReportAnalyzer
 
 Listas = [
     [12, 99, 35, 51, 4, 16, 89, 1, 15, 25],
@@ -26,21 +27,26 @@ Metodos = {
 
 if __name__=="__main__":
 
-    lista = Listas[3]
-    largo_lista = len(lista) - 1
-    nombre_metodo = "Quick Sort"
+    lista = Listas[2]
+    largo_lista = len(lista)
+    nombre_metodo = "Shell"
     metodo = Metodos[nombre_metodo]
 
     prueba_funcionamiento = TestRun()
     generador_reporte = ProfilerReportGenerator()
 
     resultado = prueba_funcionamiento.check_operation(metodo ,list(lista), largo_lista)
-    generador_reporte.Generate_Profiler_Report(nombre_metodo, metodo, list(lista), largo_lista)
+    rura_reporte = generador_reporte.Generate_Profiler_Report(nombre_metodo, metodo, list(lista), largo_lista)
+    analisador_reporte = ProfilerReportAnalyzer()
+    analisis_reporte = analisador_reporte.GenerateReportAnalysis(rura_reporte)
+
 
     print(f"La lista antes del metodo:  " + str(resultado["Lista Original"]))
     print(f"Autentica lista ordenada:   " + str(resultado["Lista Ordenada"]))
     print(f"Lista pasado por el metodo: " + str(resultado["Lista Procesada"]))
     print(f"Funcionamiento del metodo:  " + str(resultado["Funcionamiento"]))
+    for campo, resultado in analisis_reporte.items():
+        print(campo, "-->", resultado)
 
     
     

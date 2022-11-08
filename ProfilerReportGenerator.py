@@ -46,7 +46,9 @@ class ProfilerReportGenerator():
         Analizador.enable_by_count()
         Analizador.print_stats(recolector_datos)
 
-        self.Record_Print(nombre_funcion, recolector_datos)
+        ruta_reporte = self.Record_Print(nombre_funcion, recolector_datos)
+
+        return ruta_reporte
 
 
 if __name__ == "__main__":

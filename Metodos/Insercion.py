@@ -8,7 +8,7 @@ def Metodo1(lista, largo_lista):
         k = I - 1
         sw = False
 
-        while ((not sw) & (k >= 0)):
+        while (( not sw ) & (k >= 0)):
 
             if (auxiliar < lista[k]):
                 lista[k + 1] = lista[k]

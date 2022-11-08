@@ -1,6 +1,3 @@
-from math import ceil, floor
-# Ceil --> para redondear para arriba 
-# Floor -> para redondear para abajo
 
 def Metodo(lista, largo_lista):
     

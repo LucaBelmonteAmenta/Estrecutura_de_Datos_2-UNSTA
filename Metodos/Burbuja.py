@@ -23,6 +23,7 @@ def Metodo2(lista, largo_lista):
                 auxiliar = lista[J]
                 lista[J] = lista[J + 1]
                 lista[J + 1] = auxiliar
+            print(lista)
     return lista
 
 
